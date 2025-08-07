@@ -235,3 +235,19 @@
   )
 )
 
+;; Security and Access Control Enhancements
+(define-constant MAX-ADMIN-ROLES u3)
+(define-constant ADMIN-THRESHOLD u2)
+
+;; New Roles and Permissions
+(define-map role-assignments
+  { 
+    user: principal,
+    role: uint 
+  }
+  {
+    is-active: bool,
+    assigned-by: principal,
+    assigned-at: uint
+  }
+)
